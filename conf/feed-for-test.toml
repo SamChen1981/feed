@@ -1,0 +1,46 @@
+LogDir = "/www/feed/logs"
+CpuNum = 0
+
+[Http]
+Host="0.0.0.0"
+Port=7788
+NeedAccesslog=true
+
+[Admin]
+Host="127.0.0.1"
+Port=8899
+NeedAccesslog=true
+
+[redis]
+Master = "127.0.0.1:6379"
+Slaves = ["127.0.0.1:6379", "127.0.0.1:6379"]
+MaxConns = 100
+MaxIdle = 10
+ReadTimeout = 3000 # ms
+ConnectTimeout = 3000 # ms
+IdleTimeout = 180000 # ms
+Auth="test_auth"
+
+[memcached]
+Master = "127.0.0.1:11211"
+Slave =  "127.0.0.1:11211"
+Replicas = ["127.0.0.1:11211"]
+ReplicaWritePolicy=0
+SetBackMaster=true
+SetBackExpiration=1296000
+ReplicaExpiration=1296000
+
+[kafka]
+
+
+[mysql]
+Master = "127.0.0.1:3306"
+Slaves = ["127.0.0.1:3306", "127.0.0.1:3306"]
+MaxConns = 100
+MaxIdle = 10
+ReadTimeout = 3000 # ms
+ConnectTimeout = 3000 # ms
+IdleTimeout = 180000 # ms
+User = "root"
+Passwd = ""
+DbName = "feed"

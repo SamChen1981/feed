@@ -1,0 +1,19 @@
+<seelog minlevel="error">
+    <outputs formatid="common">
+        <filter levels="debug">
+            <rollingfile type="date" filename="/www/feed/logs/debug.log" datepattern="20060102"/>
+        </filter>
+        <filter levels="info">
+            <rollingfile type="date" filename="/www/feed/logs/info.log" datepattern="20060102"/>
+        </filter>
+        <filter levels="warn">
+            <rollingfile type="date" filename="/www/feed/logs/warn.log" datepattern="20060102"/>
+        </filter>
+        <filter levels="error">
+            <rollingfile type="date" filename="/www/feed/logs/error.log" datepattern="20060102"/>
+        </filter>
+    </outputs>
+    <formats>
+        <format id="common" format="%Date(2006-01-02 15:04:05.000) %PID [%LEVEL] %Msg%n"/>
+    </formats>
+</seelog>
