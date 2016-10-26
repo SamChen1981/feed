@@ -24,28 +24,28 @@ by 刘智辉
 * * *
 ## 业务接口:  
 **1、好友动态**  
-&ensp;&ensp;&ensp;&ensp;</api/friendstimeline>  
+&ensp;&ensp;&ensp;&ensp;<http://127.0.0.1:7788/api/friendstimeline>  
 &ensp;&ensp;&ensp;&ensp;GET  
 &ensp;&ensp;&ensp;&ensp;参数：timebegin、timeend、userid   
 &ensp;&ensp;&ensp;&ensp;说明：利用时间段和用户id获取好友动态  
 **2、个人动态**  
-&ensp;&ensp;&ensp;&ensp;</api/personaltimeline>  
+&ensp;&ensp;&ensp;&ensp;<http://127.0.0.1:7788/api/personaltimeline>  
 &ensp;&ensp;&ensp;&ensp;GET  
 &ensp;&ensp;&ensp;&ensp;参数：timebegin、timeend、userid   
-&ensp;&ensp;&ensp;&ensp;说明：利用时间段和用户id获取个人动态
+&ensp;&ensp;&ensp;&ensp;说明：利用时间段和用户id获取个人动态  
 &ensp;&ensp;&ensp;&ensp;POST  
 &ensp;&ensp;&ensp;&ensp;参数：action(add/delete)、userid、timestamp、value  
 &ensp;&ensp;&ensp;&ensp;说明：发布个人动态需要提供时间，内容，用户id以及关键的操作（增加或删除）  
 **3、好友关系**  
-&ensp;&ensp;&ensp;&ensp;</api/friendsinfo>  
+&ensp;&ensp;&ensp;&ensp;<http://127.0.0.1:7788/api/friendsinfo>  
 &ensp;&ensp;&ensp;&ensp;GET  
 &ensp;&ensp;&ensp;&ensp;参数：userid   
-&ensp;&ensp;&ensp;&ensp;说明：返回用户的关注对象和粉丝列表
+&ensp;&ensp;&ensp;&ensp;说明：返回用户的关注对象和粉丝列表  
 &ensp;&ensp;&ensp;&ensp;POST  
 &ensp;&ensp;&ensp;&ensp;参数：action(add/delete)、userid、like和fan二选一    
 &ensp;&ensp;&ensp;&ensp;说明：更改好友关系需要提供用户id以及关键的操作（增加或删除）和粉丝id或者关注对象的id（两者同时存在，以like为优先）  
 **4、未读数**  
-&ensp;&ensp;&ensp;&ensp;</api/unreadnum>  
+&ensp;&ensp;&ensp;&ensp;<http://127.0.0.1:7788/api/unreadnum>   
 &ensp;&ensp;&ensp;&ensp;GET  
 &ensp;&ensp;&ensp;&ensp;参数：userid   
 &ensp;&ensp;&ensp;&ensp;说明：返回用户好友动态的未读数
@@ -53,12 +53,12 @@ by 刘智辉
 * * *
 
 ## 启动:
-**Mac**
+**Mac**  
 	cd $GOPATH/src/feed      
 	go build main.go  
 	sudo ./main -c conf/feed-for-test.toml  
 
-**Linux** 
+**Linux**   
 	cd $GOPATH/src/feed  
 	./build.sh  
 	cd feed  
